@@ -1,12 +1,14 @@
 import { test, expect } from '@playwright/test';
-import {LoginPage, LoginTest} from '../../pages/login';
+import { LoginPage, LoginTest } from '../../pages/login';
+const testdata = JSON.parse(JSON.stringify(require("../../testdata.json")))
 
 test('test', async ({ page }) => {
 
-  const Login =new LoginPage(page);
+  const Login = new LoginPage(page);
+  await page.pause();
 
   await Login.goToLoginPage();
-  await Login.login('tomsmith','SuperSecretPassword!');
+  await Login.login(testdata.username, testdata.password);
 
 
   // await page.goto('https://the-internet.herokuapp.com/login');
