@@ -1,4 +1,6 @@
 {
     "username": "tomsmith",
-    "password": "SuperSecretPassword!"
+    "password": "SuperSecretPassword!",
+    "ngf_username": "newuser",
+    "ngf_password": "SheenamRohit1$"
 }
